@@ -15,5 +15,5 @@ You shouldn't use more than 200 frames, as it will probably be just noise beyond
 The images can be assembled into an animation with ffmpeg. I use these parameters for 1 frame per second:
 
 ```sh
- ffmpeg -r 1 -i lena%03d.jpg -vcodec libx264 lena.mp4
+ ffmpeg -r 1 -i hodge%03d.jpg -vcodec libx264 hodge.mp4
 ```
