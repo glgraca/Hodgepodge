@@ -1,6 +1,6 @@
 # Hodgepodge
 
-## Celular Automata from images
+## Cellular Automata from Images
 
 This script creates a series of images that can be assembled into an animation.
 
