@@ -85,7 +85,7 @@ for my $i (0..($ARGV[4]-1)) {
       $lena->setPixel($x, $y, $lena->colorResolve($new_red, $new_green, $new_blue));
     }
   } 
-  open(IMAGE, sprintf(">lena%03d.jpg", $i));
+  open(IMAGE, sprintf(">hodge%03d.jpg", $i));
   binmode IMAGE;
   print IMAGE $lena->jpeg(100);
   close IMAGE;
