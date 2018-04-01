@@ -10,9 +10,9 @@ if($#ARGV<4) {
 }
 
 GD::Image->trueColor(1);
-my $lena=GD::Image->new($ARGV[0]);
-my $width=$lena->width();
-my $height=$lena->height();
+my $hodge=GD::Image->new($ARGV[0]);
+my $width=$hodge->width();
+my $height=$hodge->height();
 
 my $k_red=$ARGV[1];
 my $k_blue=$ARGV[2];
@@ -82,12 +82,12 @@ for my $i (0..($ARGV[4]-1)) {
       $new_green=0 if $new_green>255;
       $greens2[$index]=$new_green;
 
-      $lena->setPixel($x, $y, $lena->colorResolve($new_red, $new_green, $new_blue));
+      $hodge->setPixel($x, $y, $hodge->colorResolve($new_red, $new_green, $new_blue));
     }
   } 
   open(IMAGE, sprintf(">hodge%03d.jpg", $i));
   binmode IMAGE;
-  print IMAGE $lena->jpeg(100);
+  print IMAGE $hodge->jpeg(100);
   close IMAGE;
   @reds=@reds2;
   @blues=@blues2;
