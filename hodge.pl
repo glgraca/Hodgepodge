@@ -24,7 +24,7 @@ my @greens=();
 
 for my $x (0..$width-1) {
   for my $y (0..$height-1) {
-    my @pixel=$lena->rgb($lena->getPixel($x,$y));
+    my @pixel=$hodge->rgb($hodge->getPixel($x,$y));
     my $index=$x+$y*$width;
     $reds[$index]=$pixel[0];
     $blues[$index]=$pixel[2];
